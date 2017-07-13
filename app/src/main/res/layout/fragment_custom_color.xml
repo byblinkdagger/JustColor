@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0"
+    tools:context="com.blink.dagger.justcolor.ui.fragment.CustomColorFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="18dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/color_value"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="#000000"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_launcher"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:id="@+id/tv_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="RGB调色(●'◡'●)" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/area_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekbar_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="12dp"
+                    app:bsb_bubble_color="@color/red"
+                    app:bsb_bubble_text_color="@color/white"
+                    app:bsb_max="255"
+                    app:bsb_min="0"
+                    app:bsb_progress="0"
+                    app:bsb_show_progress_in_float="true"
+                    app:bsb_thumb_color="@color/red"
+                    app:bsb_track_color="@color/red"
+                    app:bsb_second_track_color="@color/colorAccent"/>
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekbar_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="40dp"
+                    app:bsb_bubble_color="@color/green"
+                    app:bsb_bubble_text_color="@color/white"
+                    app:bsb_max="255"
+                    app:bsb_min="0"
+                    app:bsb_progress="0"
+                    app:bsb_show_progress_in_float="true"
+                    app:bsb_thumb_color="@color/green"
+                    app:bsb_track_color="@color/green"
+                    app:bsb_second_track_color="@color/dark_green"/>
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekbar_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="40dp"
+                    app:bsb_bubble_color="@color/blue"
+                    app:bsb_bubble_text_color="@color/white"
+                    app:bsb_max="255"
+                    app:bsb_min="0"
+                    app:bsb_progress="0"
+                    app:bsb_show_progress_in_float="true"
+                    app:bsb_thumb_color="@color/blue"
+                    app:bsb_track_color="@color/blue"
+                    app:bsb_second_track_color="@color/dark_blue"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/generate_color"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="#000"
+                android:text="生成并收藏"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
